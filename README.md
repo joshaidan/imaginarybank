@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://travis-ci.org/joshaidan/imaginarybank.svg?branch=master)](https://travis-ci.org/joshaidan/imaginarybank)
+
 The Imaginary Bank of the Internet is an entirely imaginary banking system.
 The money is not real, the credit is fake. It is built entirely for fun
 and amusement. Every attempt is made to make the system secure, but nothing
