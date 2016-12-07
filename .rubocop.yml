@@ -1,0 +1,25 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - bin/*
+    - Gemfile
+    - lib/snippets/**/*
+    - vendor/**/*
+    - data/**/*
+    - db/schema.rb
+    - db/migrate/*
+    - test/dummy/**/*
+
+inherit_from:
+  .rubocop_todo.yml
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
