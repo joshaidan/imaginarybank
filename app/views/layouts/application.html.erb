@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Imaginarybank</title>
+    <title>Imaginary Bank</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <% if notice %> <p class="notice"><%= notice %></p><% end %>
+    <% if alert  %> <p class="alert"><%= alert %>  </p><% end %>
     <%= yield %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
   </body>
 </html>
