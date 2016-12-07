@@ -6,6 +6,6 @@ class Account < ApplicationRecord
   enum account_type: [:chequing, :creditline]
 
   def audit_balance
-    self.balance = self.transactions.all.sum(:amount)
+    self.balance = transactions.all.sum(:amount)
   end
 end
