@@ -1,14 +1,8 @@
 require 'test_helper'
 
 class AccountsControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test "require user to login" do
     get accounts_url
-    assert_response :success
+    assert_response :redirect
   end
-
-  test "should get show" do
-    get accounts_url
-    assert_response :success
-  end
-
 end
