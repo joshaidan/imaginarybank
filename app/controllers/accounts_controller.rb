@@ -5,4 +5,10 @@ class AccountsController < ApplicationController
   def show
     @account = Accounts.find(params[:id])
   end
+
+  def create
+  end
+
+  def destroy
+  end
 end
