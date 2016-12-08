@@ -1,0 +1,21 @@
+<%= form_for @account, :html => { :class => "form-horizontal" } do |f| %>
+  <% if @account.errors.any? %>
+  <div id="error_explanation">
+      <h2><%= pluralize(@account.errors.count, "error") %>
+          The following prevented this account from being created:</h2>
+
+      <ul>
+          <% @account.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+      </ul>
+  </div>
+  <% end %>
+
+  <div class="form-group">
+        <label class="col-sm-3 control-label">Account Type: </label>
+        <div class="col-sm-9">
+            <%= f.text_field :account_type %>
+        </div>
+    </div>
+<% end %>

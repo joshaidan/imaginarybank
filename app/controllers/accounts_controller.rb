@@ -10,6 +10,7 @@ class AccountsController < ApplicationController
   end
 
   def new
+    @account = current_user.accounts.new
   end
 
   def create
