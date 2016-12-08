@@ -9,6 +9,9 @@ class AccountsController < ApplicationController
     @account = current_user.accounts.find(params[:id])
   end
 
+  def new
+  end
+
   def create
   end
 

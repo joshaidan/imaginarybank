@@ -21,3 +21,14 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+def sign_in_user
+  visit root_url
+  assert_equal new_user_session_path, current_path
+  within('#new_user') do
+    fill_in 'Email', with: 'user@example.com'
+    fill_in 'Password', with: 'password'
+  end
+  click_button 'Sign in'
+  assert_equal root_path, current_path
+end
