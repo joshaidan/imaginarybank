@@ -2,10 +2,11 @@ class AccountsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @accounts = current_user.accounts
   end
 
   def show
-    @account = Accounts.find(params[:id])
+    @account = current_user.accounts.find(params[:id])
   end
 
   def create
