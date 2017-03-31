@@ -14,8 +14,22 @@ class AccountsController < ApplicationController
   end
 
   def create
+    @account = current_user.accounts.new(account_params)
+    respond_to do |format|
+      if @account.save!
+        format.html { redirect_to accounts_path }
+      else
+        format.html { redirect_to accounts_path }
+      end
+    end
   end
 
   def destroy
+  end
+
+  private
+
+  def account_params
+    params.required(:account).permit(:account_type)
   end
 end
