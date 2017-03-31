@@ -17,9 +17,9 @@ class AccountsController < ApplicationController
     @account = current_user.accounts.new(account_params)
     respond_to do |format|
       if @account.save!
-        format.html { redirect_to accounts_path }
+        format.html { redirect_to accounts_path, notice: "Successfully opened new #{@account.account_type} account." }
       else
-        format.html { redirect_to accounts_path }
+        format.html { redirect_to new_accounts_path }
       end
     end
   end
