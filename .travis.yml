@@ -2,10 +2,9 @@ language: ruby
 services:
  - postgresql
 rvm:
- - 2.2.5
+ - 2.7.1
 before_script:
  - psql -c 'create database travis_ci_test;' -U postgres
- - gem install bundler -v '< 2' --conservative
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
